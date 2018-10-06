@@ -18,7 +18,7 @@ class Sidebar extends Component {
         <hr/>
 
         <div className={styles.bottom}>
-          Github
+          <i class="fab fa-soundcloud"></i>
 
         </div>
 

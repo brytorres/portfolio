@@ -8,16 +8,33 @@
   color: white;
 
   .top {
+    width: 100%;
+    border-bottom: 1px $sky solid;
+
     .image{
       background-image: url('../images/bryan_torres.jpg');
-      width: 180px;
-      height: 180px;
+      width: 150px;
+      height: 150px;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center center;
       border-radius: 50%;
       overflow: hidden;
       margin: 0 auto;
+    }
+
+    .about {
+      margin: 20px 0px;
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .bottom {
+    i {
+      color: $frost;
     }
   }
 
@@ -58,17 +75,17 @@
 
   // Setting the width and padding sizes
   @include media('>=large') {
-    $aside-width: 15%;
+    $aside-width: 20%;
     $vertical-padding: 50px;
-    $horizontal-padding: 40px;
+    $horizontal-padding: 30px;
     width: $aside-width;
     padding: $vertical-padding $horizontal-padding;
   }
 
   @include media('>=medium', '<large') {
-    $aside-width: 15%;
+    $aside-width: 20%;
     $vertical-padding: 50px;
-    $horizontal-padding: 40px;
+    $horizontal-padding: 30px;
     width: $aside-width;
     padding: $vertical-padding $horizontal-padding;
   }

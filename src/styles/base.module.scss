@@ -11,8 +11,8 @@ body {
   
   // Setting the width and padding sizes
   @include media('>=large') {
-    $main-width: 85%;
-    $main-margin-left: 15%;
+    $main-width: 20%;
+    $main-margin-left: 20%;
     $vertical-padding: 50px;
     $horizontal-padding: 8%;
     // width: $main-width;
@@ -21,8 +21,8 @@ body {
   }
 
   @include media('>=medium', '<large') {
-    $main-width: 85%;
-    $main-margin-left: 15%;
+    $main-width: 20%;
+    $main-margin-left: 20%;
     $vertical-padding: 50px;
     $horizontal-padding: 8%;
     // width: $main-width;

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import Sidebar from '../components/Sidebar'
-import config from '../config'
+import config from '../config/config'
 
 import base from '../styles/base.module.scss';
 import '../styles/sidebar.module.scss';
