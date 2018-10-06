@@ -16,7 +16,7 @@ module.exports = {
   minibio: `
   `,
   url: 'https://bryantorres.pro',
-  image: '',
+  image: '/src/images/bryan_torres.jpg',
   logo: '',
   twitter: '@brytorres_',
   fbAppID: '',

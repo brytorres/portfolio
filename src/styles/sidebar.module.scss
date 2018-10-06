@@ -4,8 +4,22 @@
 .sidebar {
   align-self: stretch;
   margin: 0 auto;
-  background-color: black;
+  background-color: $grey;
   color: white;
+
+  .top {
+    .image{
+      background-image: url('../images/bryan_torres.jpg');
+      width: 180px;
+      height: 180px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto;
+    }
+  }
 
   // Positioning on the side for bigger screens
   @include media('>=medium') {
