@@ -1,14 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Bryan Torres',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
+    `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'Bryan Torres',
+        short_name: '@brytorres',
         start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',
