@@ -18,6 +18,7 @@ module.exports = {
   url: 'https://bryantorres.pro',
   image: '/src/images/bryan_torres2.jpg',
   logo: '',
+  linkedin: 'https://www.linkedin.com/in/bryan-torres-3495049b/',
   github: 'https://github.com/brytorres',
   twitter: 'https://twitter.com/brytorres_',
   soundcloud: 'https://soundcloud.com/brytorres',

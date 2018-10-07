@@ -21,13 +21,16 @@ class Sidebar extends Component {
         <div className={styles.bottom}>
 
           <div className={styles.links}>
-            <a href={config.github} className={styles.link}>
+            <a href={config.linkedin} className={styles.link} target="_blank">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href={config.github} className={styles.link} target="_blank">
               <i className="fab fa-github"></i>
             </a>
-            <a href={config.twitter} className={styles.link}>
+            <a href={config.twitter} className={styles.link} target="_blank">
               <i className="fab fa-twitter"></i>
             </a>
-            <a href={config.soundcloud} className={styles.link}>
+            <a href={config.soundcloud} className={styles.link} target="_blank">
               <i className="fab fa-soundcloud"></i>
             </a>
           </div>
