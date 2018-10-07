@@ -38,7 +38,7 @@ class Sidebar extends Component {
 
           <div className={styles.links}>
             <a href={config.linkedin} className={styles.link} target="_blank" rel="noopener noreferrer">
-              <i class="fab fa-linkedin-in"></i>
+              <i className="fab fa-linkedin-in"></i>
             </a>
             <a href={config.github} className={styles.link} target="_blank" rel="noopener noreferrer">
               <i className="fab fa-github"></i>

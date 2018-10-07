@@ -1,20 +1,12 @@
 import React, { Component } from 'react'
-import { graphql } from "gatsby"
-import * as PropTypes from "prop-types"
 import Experience from '../components/Experience'
 // import config from '../config/config';
 
 import styles from '../styles/experience.module.scss';
 
-const propTypes = {
-  data: PropTypes.object.isRequired,
-}
 
 class ExperienceSection extends Component {
   render() {
-    const experience = this.props.data
-
-    console.log(experience)
 
     return (
       <div className={styles.experienceSection}>
@@ -60,31 +52,4 @@ class ExperienceSection extends Component {
   }
 }
 
-ExperienceSection.propTypes = propTypes
-
 export default ExperienceSection;
-
-export const pageQuery = graphql`
-  query {
-    allContentfulExperience {
-      edges {
-        node {
-          jobTitle
-          employer
-          employerLogo {
-            fixed(width: 400, height: 140) {
-              base64
-              src
-              srcSet
-              height
-              width
-            }
-          }
-          url
-          startDate
-          endDate
-        }
-      }
-    }
-  }
-`
