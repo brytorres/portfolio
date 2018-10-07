@@ -24,6 +24,10 @@ class ProjectsSection extends Component {
       ]
     ]
 
+    const clientProjects = this.props.clientProjects
+
+    // const myProjects = this.props.myProjects
+
     return (
       <div className={styles.projectsSection}>
 
@@ -31,32 +35,19 @@ class ProjectsSection extends Component {
 
         <div className={styles.projectsGroup}>
 
-          <Project
-            client = 'Retrograde Zone'
-            projectUrl = 'https://www.torvel.us'
-            description = 'I did this, that and the other'
-            image = 'urlHere'
-            status = 'broken'
-            technologies = {technologies[0]}
-          />
-
-          <Project
-            client = 'Mi Casa'
-            projectUrl = 'https://www.eatatmiscasa.com'
-            description = 'I did this, that and the other'
-            image = 'urlHere'
-            status = 'completed'
-            technologies = {technologies[1]}
-          />
-
-          <Project
-            client = 'Pro192 Studios'
-            projectUrl = 'https://www.pro192.com'
-            description = 'I did this, that and the other'
-            image = 'urlHere'
-            status = 'completed'
-            technologies = {technologies[2]}
-          />
+          {
+            clientProjects.map((project, i) => {
+              const node = project.node
+              return <Project
+                        key = {i}
+                        client = {node.title}
+                        projectUrl = {node.url}
+                        description = {node.description.description}
+                        image = {node.image}
+                        technologies = {node.technologiesUsed}
+                      />
+            })
+          }
 
         </div>
 

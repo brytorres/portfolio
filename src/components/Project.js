@@ -12,6 +12,12 @@ class Project extends Component {
     let image;
     let badges;
 
+    // console.log(this.props.image);
+
+    image = `http:${this.props.image}`
+    
+    // console.log(image)
+
     if (this.props.image){
       image = <div className={styles.image}>
                 <img src={this.props.image} alt="" />

@@ -17,11 +17,16 @@ class Experience extends Component {
     const end = this.props.endDate
     const year = start === end ? `${start}` : `${start} - ${end}`;
 
+    // console.log(this.props.logo)
+    const logo = `http:${this.props.logo}`
+
+    const bgImage = {
+      backgroundImage: `url(${logo})`
+    }
+
     return (
       <div className={styles.experience}>
-        <div className={styles.image}>
-          <img src={this.props.image} alt=""/>
-        </div>
+        <div className={styles.image} style={bgImage}></div>
 
         <a href={this.props.employerUrl}>
           <h4 className={styles.employer}>

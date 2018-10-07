@@ -8,6 +8,8 @@ class ExperienceSection extends Component {
 
     const allExperience = this.props.experience
 
+    console.log(allExperience)
+
     return (
       <div className={styles.experienceSection}>
 
@@ -25,7 +27,7 @@ class ExperienceSection extends Component {
                         description = {experience.node.description.description}
                         startDate = {experience.node.startDate}
                         endDate = {experience.node.endDate}
-                        logo = {experience.node.employerLogo.fixed.src}
+                        logo = {experience.node.employerLogo.fluid.src}
                       />
             }) 
           }

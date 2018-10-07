@@ -11,15 +11,11 @@ const IndexPage = props => {
 
     const siteInfo = props.data.allContentfulSiteInfo.edges[0].node
     const experience = props.data.allContentfulExperience.edges
-    // const clientProjects = props.data.allContentfulClientProjects.edges
-    // const myProjects = props.data.allContentfulMyProjects.edges
+    const clientProjects = props.data.allContentfulClientProjects.edges
+    const myProjects = props.data.allContentfulMyProjects.edges
     // const skills = props.data.allContentfulCategories.edges
 
-    // console.log(siteInfo);
-    // console.log(experience);
     // console.log(clientProjects);
-    // console.log(myProjects);
-    // console.log(skills);
 
 
     return (
@@ -41,7 +37,10 @@ const IndexPage = props => {
       experience = {experience}
     />
 
-    <ProjectsSection />
+    <ProjectsSection 
+      clientProjects = {clientProjects}
+      myProjects = {myProjects}
+    />
 
     <Skills />
     
@@ -72,12 +71,8 @@ export const pageQuery = graphql`
           jobTitle
           employer
           employerLogo {
-            fixed(width: 400, height: 140) {
-              # base64
+            fluid {
               src
-              # srcSet
-              height
-              width
             }
           }
           url
@@ -96,12 +91,8 @@ export const pageQuery = graphql`
           title
           url
           image {
-            fixed(width: 400, height: 140) {
-              # base64
+            fluid {
               src
-              # srcSet
-              height
-              width
             }
           }
           description {
