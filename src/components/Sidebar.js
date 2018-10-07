@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import config from '../config/config';
 
 import styles from '../styles/sidebar.module.scss';
-import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css'
 
 class Sidebar extends Component {
   constructor(props){

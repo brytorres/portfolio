@@ -1,6 +1,7 @@
 module.exports = {
   title: 'Bryan Torres | Web Developer. Media Producer. Consultant. Doer.',
-  description: 'Bryan Torres. Web Developer. Media Producer. Consultant. Doer.',
+  homeTitle: "I'm Bryan Torres.",
+  roleTagline: 'Web Developer. Media Producer. Consultant. Doer.',
   keywords: 'web developer, full stack, consultant, developer',
   roles: [
     'Web Developer',
@@ -17,8 +18,12 @@ module.exports = {
               , and find solutions inspired by
               <span class= "p--normal" > purpose</span>.</p>
             `,
-  minibio: `
-  `,
+  minibio: `Duis suscipit turpis in tortor consectetur consectetur. Maecenas sit 
+  amet consequat risus, vitae aliquam turpis. Cras consectetur lectus eget eros 
+  ornare commodo. Aliquam a mi nec metus dapibus porta. Nunc vitae risus tortor. 
+  Suspendisse eu tincidunt diam. Aliquam sagittis metus arcu, ut rhoncus nisi 
+  fermentum id. Vestibulum ac auctor orci. Proin magna metus, lacinia ac tincidunt 
+  eget, pharetra non est.`,
   url: 'https://bryantorres.pro',
   image: '/src/images/bryan_torres2.jpg',
   logo: '',

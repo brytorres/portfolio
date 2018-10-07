@@ -8,6 +8,7 @@ import config from '../config/config'
 import main from '../styles/main.module.scss';
 import '../styles/sidebar.module.scss';
 import '../../node_modules/normalize.css/normalize.css';
+import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css'
 
 const Layout = ({ children }) => (
   <StaticQuery
