@@ -27,10 +27,13 @@ class Project extends Component {
       image = '';
     }
 
-    if (this.props.version){
+    if (this.props.technologies){
       badges = <div className={styles.badges}>
-                <div className={styles.version}>{this.props.version}</div>
-                <div className={styles.status}>{this.props.status}</div>
+                {
+                  this.props.technologies.map((techology, i) => {
+                    return <div className={styles.tech} key={i}>{techology}</div>
+                  })
+                }
               </div>
               
     } else{

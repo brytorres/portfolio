@@ -38,12 +38,13 @@ class ProjectsSection extends Component {
           {
             clientProjects.map((project, i) => {
               const node = project.node
+              console.log(node)
               return <Project
                         key = {i}
                         client = {node.title}
                         projectUrl = {node.url}
                         description = {node.description.description}
-                        image = {node.image}
+                        image = {node.image.fluid.src}
                         technologies = {node.technologiesUsed}
                       />
             })
