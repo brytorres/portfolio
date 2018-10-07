@@ -27,7 +27,22 @@ const Layout = ({ children }) => (
               about {
                 about
               }
-              # resume
+              headshot {
+                fixed(width: 300, height: 300) {
+                  # base64
+                  src
+                  # srcSet
+                  height
+                  width
+                }
+              }
+              resume {
+                file {
+                  url
+                  fileName
+                  contentType
+                }
+              }
             }
           }
         }
@@ -47,13 +62,14 @@ const Layout = ({ children }) => (
         </Helmet>
 
         <Sidebar 
-          // image = {data.allContentfulSiteInfo.edges[0].node.image.fixed.src}
+          image = {data.allContentfulSiteInfo.edges[0].node.headshot.fixed.src}
           roles = {data.allContentfulSiteInfo.edges[0].node.roles}
           about = {data.allContentfulSiteInfo.edges[0].node.about}
           linkedIn = {data.allContentfulSiteInfo.edges[0].node.linkedIn}
           github = {data.allContentfulSiteInfo.edges[0].node.github}
           twitter = {data.allContentfulSiteInfo.edges[0].node.twitter}
           soundcloud = {data.allContentfulSiteInfo.edges[0].node.soundcloud}
+          resume = {data.allContentfulSiteInfo.edges[0].node.resume.file.url}
         />
 
         <div className={main.content}>

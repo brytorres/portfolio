@@ -14,17 +14,18 @@ class Sidebar extends Component {
 
   
   render() {
-    console.log(this.props.headshot);
+    
+    const image = `http:${this.props.image}`
 
-    // const image = {
-    //   backgroundImage : this.props
-    // }
+    const bgImage = {
+      backgroundImage: `url(${image})`
+    }
 
     return (
       <div className={styles.sidebar}>
 
         <div className={styles.top}>
-          <div className={styles.image}></div>
+          <div className={styles.image} style={bgImage}></div>
           <div className={styles.roles}>
             <ul>
               { this.props.roles.map((role, i) => {
@@ -58,14 +59,16 @@ class Sidebar extends Component {
 
 
           <div className={styles.resume}>
-            <i className="fas fa-file"></i>
-            <br />
-            <p>Download my resume</p>
+            <a href={this.props.resume}>
+              <i className="fas fa-file"></i>
+              <br />
+              <p>Download my resume</p>
+            </a>
           </div>
 
-          <p className={styles.credit}>
+          {/* <p className={styles.credit}>
             Built with <span role="img" aria-label="magic">⚡️</span> and <span role="img" aria-label="pizza">🍕</span> using <a href="https://www.gatsbyjs.org/">GatsbyJS</a>
-          </p>
+          </p> */}
 
         </div>
 

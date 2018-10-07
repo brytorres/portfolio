@@ -13,7 +13,7 @@
     border-bottom: 1px $sky solid;
 
     .image {
-      background-image: url('../images/bryan_torres.jpg');
+      // background-image: url('../images/bryan_torres.jpg');
       width: 150px;
       height: 150px;
       background-size: cover;
@@ -80,20 +80,36 @@
       justify-content: center;
       flex-direction: column;
 
-      i {
-        margin: 0 auto;
-        color: $cream;
-        font-size: 30px;
+      a {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-decoration: none;
+        text-shadow: unset;
+        background: unset;
+        
+        i {
+          margin: 0 auto;
+          color: $cream;
+          font-size: 30px;
+        }
+  
+        p {
+          margin-top: 10px;
+          margin-bottom: 0px;
+          color: $frost;
+          text-transform: uppercase;
+          text-align: center;
+          font-size: 12px;
+        }
+
+        &:hover {
+          i, p {
+            color: $sky;
+          }
+        }
       }
 
-      p {
-        margin-top: 10px;
-        margin-bottom: 0px;
-        color: $frost;
-        text-transform: uppercase;
-        text-align: center;
-        font-size: 12px;
-      }
     }
 
     .credit {
