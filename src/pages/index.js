@@ -5,35 +5,36 @@ import ExperienceSection from '../components/ExperienceSection'
 import ProjectsSection from '../components/ProjectsSection'
 import Skills from '../components/SkillsSection'
 
-import config from '../config/config'
 import styles from '../styles/main.module.scss'
 
 const IndexPage = props => {
 
-    const experience = props.data.allContentfulExperience.edges
-    const clientProjects = props.data.allContentfulClientProjects.edges
-    const myProjects = props.data.allContentfulMyProjects.edges
-    const skills = props.data.allContentfulCategories.edges
+    const siteInfo = props.data.allContentfulSiteInfo.edges[0].node
+    // const experience = props.data.allContentfulExperience.edges
+    // const clientProjects = props.data.allContentfulClientProjects.edges
+    // const myProjects = props.data.allContentfulMyProjects.edges
+    // const skills = props.data.allContentfulCategories.edges
 
-    console.log(experience);
-    console.log(clientProjects);
-    console.log(myProjects);
-    console.log(skills);
+    console.log(siteInfo);
+    // console.log(experience);
+    // console.log(clientProjects);
+    // console.log(myProjects);
+    // console.log(skills);
 
 
     return (
     <Layout>
 
     <h3 className={styles.title}>
-      {config.homeTitle}
+      {siteInfo.headingTitle}
     </h3>
 
     <h5 className={styles.tagline}>
-      {config.roleTagline}
+        {siteInfo.tagline}
     </h5>
 
     <p className={styles.about}>
-      {config.minibio}
+      {siteInfo.miniBio.miniBio}
     </p>
 
     <ExperienceSection />
@@ -50,6 +51,19 @@ export default IndexPage
 
 export const pageQuery = graphql`
   query {
+    allContentfulSiteInfo {
+      edges {
+        node {
+          headingTitle
+          tagline
+          siteUrl
+          miniBio {
+            miniBio
+          }
+        }
+      }
+    }
+    
     allContentfulExperience {
       edges {
         node {

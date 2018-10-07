@@ -12,8 +12,13 @@ class Sidebar extends Component {
     };
   }
 
-
+  
   render() {
+    console.log(this.props.headshot);
+
+    // const image = {
+    //   backgroundImage : this.props
+    // }
 
     return (
       <div className={styles.sidebar}>
@@ -22,13 +27,13 @@ class Sidebar extends Component {
           <div className={styles.image}></div>
           <div className={styles.roles}>
             <ul>
-              { this.state.roles.map((role, i) => {
+              { this.props.roles.map((role, i) => {
                 return <li key={i}>{role}</li>
               })}
             </ul>
           </div>
           <div className={styles.about}>
-            <p>A creator of stuff that loves technology, art, and philosophy. I blend the 3 together with occasional spurts of gaming, nature. Music is my hearts rhythym, code is my brains language.</p>
+            <p>{this.props.about.about}</p>
           </div>
         </div>
 
@@ -37,16 +42,16 @@ class Sidebar extends Component {
         <div className={styles.bottom}>
 
           <div className={styles.links}>
-            <a href={config.linkedin} className={styles.link} target="_blank" rel="noopener noreferrer">
+            <a href={this.props.linkedIn} className={styles.link} target="_blank" rel="noopener noreferrer">
               <i className="fab fa-linkedin-in"></i>
             </a>
-            <a href={config.github} className={styles.link} target="_blank" rel="noopener noreferrer">
+            <a href={this.props.github} className={styles.link} target="_blank" rel="noopener noreferrer">
               <i className="fab fa-github"></i>
             </a>
-            <a href={config.twitter} className={styles.link} target="_blank" rel="noopener noreferrer">
+            <a href={this.props.twitter} className={styles.link} target="_blank" rel="noopener noreferrer">
               <i className="fab fa-twitter"></i>
             </a>
-            <a href={config.soundcloud} className={styles.link} target="_blank" rel="noopener noreferrer">
+            <a href={this.props.soundcloud} className={styles.link} target="_blank" rel="noopener noreferrer">
               <i className="fab fa-soundcloud"></i>
             </a>
           </div>
