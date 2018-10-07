@@ -52,10 +52,10 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Helmet
-          title={data.siteTitle}
+          title={data.allContentfulSiteInfo.edges[0].node.siteTitle}
           meta={[
-            { name: 'description', content: data.tagline },
-            { name: 'keywords', content: data.siteKeywords },
+            { name: 'description', content: data.allContentfulSiteInfo.edges[0].node.tagline },
+            { name: 'keywords', content: data.allContentfulSiteInfo.edges[0].node.siteKeywords },
           ]}
         >
           <html lang="en" />

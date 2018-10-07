@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import Experience from '../components/Experience'
-// import config from '../config/config';
 
 import styles from '../styles/experience.module.scss';
 
-
 class ExperienceSection extends Component {
   render() {
+
+    const allExperience = this.props.experience
 
     return (
       <div className={styles.experienceSection}>
@@ -15,35 +15,20 @@ class ExperienceSection extends Component {
 
         <div className={styles.experienceGroup}>
 
-          <Experience 
-            employer = 'Vistana' 
-            employerUrl = 'https://torvel.us'
-            title = 'Front End Developer'
-            description = 'I did this, that and the other'
-            startDate = '2018'
-            endDate = 'current'
-            logo = 'urlHere' 
-          />
-
-          <Experience 
-            employer = 'Tourico Holidays' 
-            employerUrl = 'https://torvel.us'
-            title = 'Web Developer'
-            description = 'I did this, that and the other'
-            startDate = '2017'
-            endDate = '2018'
-            logo = 'urlHere' 
-          />
-
-          <Experience 
-            employer = 'Torvel, Inc.' 
-            employerUrl = 'https://torvel.us'
-            title = 'Developer/Consultant'
-            description = 'I did this, that and the other'
-            startDate = '2012'
-            endDate = 'current'
-            logo = 'urlHere' 
-          />
+          { 
+            allExperience.map((experience, i) => {
+              return <Experience
+                        key = {i}
+                        employer = {experience.node.employer}
+                        employerUrl = {experience.node.url}
+                        title = {experience.node.jobTitle}
+                        description = {experience.node.description.description}
+                        startDate = {experience.node.startDate}
+                        endDate = {experience.node.endDate}
+                        logo = {experience.node.employerLogo.fixed.src}
+                      />
+            }) 
+          }
         
         </div>
 

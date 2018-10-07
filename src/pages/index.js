@@ -10,12 +10,12 @@ import styles from '../styles/main.module.scss'
 const IndexPage = props => {
 
     const siteInfo = props.data.allContentfulSiteInfo.edges[0].node
-    // const experience = props.data.allContentfulExperience.edges
+    const experience = props.data.allContentfulExperience.edges
     // const clientProjects = props.data.allContentfulClientProjects.edges
     // const myProjects = props.data.allContentfulMyProjects.edges
     // const skills = props.data.allContentfulCategories.edges
 
-    console.log(siteInfo);
+    // console.log(siteInfo);
     // console.log(experience);
     // console.log(clientProjects);
     // console.log(myProjects);
@@ -37,7 +37,9 @@ const IndexPage = props => {
       {siteInfo.miniBio.miniBio}
     </p>
 
-    <ExperienceSection />
+    <ExperienceSection 
+      experience = {experience}
+    />
 
     <ProjectsSection />
 
