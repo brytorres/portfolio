@@ -5,7 +5,6 @@ import styles from '../styles/skills.module.scss';
 class SkillGroup extends Component {
   
   render() {
-    console.log(this.props.skills);
 
     return (
       <div className={styles.skillsGroup}>
@@ -14,7 +13,6 @@ class SkillGroup extends Component {
 
         <ul className={styles.skillsList}>
           { this.props.skills.map((skill, i) => {
-              {/* console.log(skill) */}
               return <li key={i}>{skill}</li>
             })
           }

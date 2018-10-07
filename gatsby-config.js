@@ -23,6 +23,13 @@ module.exports = {
         icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
-    'gatsby-plugin-offline',
+    { 
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `2rgeh2yddwas`,
+        accessToken: `f28089ba90b590a37c85ff02cccfc5420e3a78e01ed8b2d282e39168bc26862f`,
+      },
+    },
+    'gatsby-plugin-offline'
   ],
 }
