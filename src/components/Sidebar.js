@@ -12,7 +12,7 @@ class Sidebar extends Component {
         <div className={styles.top}>
           <div className={styles.image}></div>
           <div className={styles.about}>
-            <p>About bio here.</p>
+            <p>A creator of stuff that loves technology, art, and philosophy. I blend the 3 together with occasional spurts of gaming, nature. Music is my hearts rhythym, code is my brains language.</p>
           </div>
         </div>
 
