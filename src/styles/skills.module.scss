@@ -1,0 +1,43 @@
+
+@import './variables';
+@import './mixins';
+
+.skills {
+  
+  h3 {
+    color: $orange;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 50px
+  }
+
+  .skillsSection{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+  }
+  
+  .skillsGroup {
+    flex-direction: row;
+    width: calc(100% * (1/4) - 10px - 1px);
+
+    h5 {
+      margin: 0;
+      font-size: 12px;
+      text-transform: uppercase
+    }
+
+    ul {
+      list-style: none;
+      margin-left: 0px;
+      margin-top: 5px;
+
+      li {
+        font-size: 14px;
+        color: $sky;
+        margin-bottom: 3px;
+      }
+    }
+  }
+}

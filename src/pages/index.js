@@ -27,6 +27,7 @@ const IndexPage = () => (
     <ProjectsSection />
 
     <Skills />
+    
   </Layout>
 )
 
