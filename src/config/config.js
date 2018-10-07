@@ -2,7 +2,11 @@ module.exports = {
   title: 'Bryan Torres | Web Developer. Media Producer. Consultant. Doer.',
   description: 'Bryan Torres. Web Developer. Media Producer. Consultant. Doer.',
   keywords: 'web developer, full stack, consultant, developer',
-  role: 'Web Developer // Consultant // Media Producer',
+  roles: [
+    'Web Developer',
+    'Consultant',
+    'Media Producer'
+  ],
   tagline: `<p class="italic mt3 px1 header--quote">
               To create the truly
               <span class= "p--normal" > amazing</span>
