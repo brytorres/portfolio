@@ -80,10 +80,17 @@
 
     .credit {
       color: $frost;
-      font-size: 12px;
+      font-size: 10px;
       text-align: center;
       margin-top: 20px;
       margin-bottom: 0px;
+
+      a {
+        text-decoration: none;
+        text-shadow: unset;
+        color: $orange;
+        background: unset;
+      }
     }
   } 
 

@@ -40,7 +40,7 @@ class Sidebar extends Component {
           </div>
 
           <p className={styles.credit}>
-            Built with ⚡️ and 🍕 using Gatsby
+            Built with <span role="img" aria-label="magic">⚡️</span> and <span role="img" aria-label="pizza">🍕</span> using <a href="https://www.gatsbyjs.org/">GatsbyJS</a>
           </p>
 
         </div>
