@@ -16,9 +16,11 @@ module.exports = {
   minibio: `
   `,
   url: 'https://bryantorres.pro',
-  image: '/src/images/bryan_torres.jpg',
+  image: '/src/images/bryan_torres2.jpg',
   logo: '',
-  twitter: '@brytorres_',
+  github: 'https://github.com/brytorres',
+  twitter: 'https://twitter.com/brytorres_',
+  soundcloud: 'https://soundcloud.com/brytorres',
   fbAppID: '',
 
   API_ENDPOINT: '',

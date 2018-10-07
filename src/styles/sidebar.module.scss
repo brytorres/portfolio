@@ -1,5 +1,6 @@
 @import './variables';
 @import './mixins';
+@import '../../node_modules/@fortawesome/fontawesome-free/css/all.css';
 
 .sidebar {
   align-self: stretch;
@@ -11,7 +12,7 @@
     width: 100%;
     border-bottom: 1px $sky solid;
 
-    .image{
+    .image {
       background-image: url('../images/bryan_torres.jpg');
       width: 150px;
       height: 150px;
@@ -24,6 +25,7 @@
     }
 
     .about {
+
       margin: 20px 0px;
 
       p {
@@ -33,10 +35,57 @@
   }
 
   .bottom {
-    i {
-      color: $frost;
+    .links {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      margin-bottom: 30px;
+
+      a {
+        text-decoration: none;
+        text-shadow: unset;
+        color: $orange;
+        background: unset;
+
+        i {
+          font-size: 30px;
+        }
+
+        &:hover {
+          color: lighten($orange, 10%);
+        }
+      }
     }
-  }
+
+    .resume {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+
+      i {
+        margin: 0 auto;
+        color: $cream;
+        font-size: 30px;
+      }
+
+      p {
+        margin-top: 10px;
+        margin-bottom: 0px;
+        color: $frost;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 12px;
+      }
+    }
+
+    .credit {
+      color: $frost;
+      font-size: 12px;
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 0px;
+    }
+  } 
 
   // Positioning on the side for bigger screens
   @include media('>=medium') {
@@ -48,16 +97,13 @@
     left: 0;
     top: 0;
     height: 100%;
-    
     .top {
       flex-grow: 1;
     }
-
     .bottom {
       width: 100%;
     }
-    
-  }
+  } 
 
   // Positioning at the bottom for smaller screens
   @include media('<medium') {
@@ -67,30 +113,31 @@
     top: auto;
     display: block;
     padding: $vertical-padding $horizontal-padding $vertical-padding $horizontal-padding;
-    
     .bottom {
       padding: $vertical-padding $horizontal-padding 0 $horizontal-padding;
     }
-  }
-
+  } 
+  
   // Setting the width and padding sizes
   @include media('>=large') {
-    $aside-width: 20%;
+    $aside-width: 25%;
     $vertical-padding: 50px;
     $horizontal-padding: 30px;
     width: $aside-width;
     padding: $vertical-padding $horizontal-padding;
   }
 
-  @include media('>=medium', '<large') {
-    $aside-width: 20%;
+  @include media('>=medium',
+  '<large') {
+    $aside-width: 25%;
     $vertical-padding: 50px;
     $horizontal-padding: 30px;
     width: $aside-width;
     padding: $vertical-padding $horizontal-padding;
   }
 
-  @include media('>xsmall', '<medium') {
+  @include media('>xsmall',
+  '<medium') {
     $aside-width: 100%;
     $vertical-padding: 50px;
     $horizontal-padding: 40px;

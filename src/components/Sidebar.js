@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-// import config from '../config';
+import config from '../config/config';
 
 import styles from '../styles/sidebar.module.scss';
+import '../../node_modules/@fortawesome/fontawesome-free/css/all.min.css'
 
 class Sidebar extends Component {
   render() {
@@ -18,7 +19,29 @@ class Sidebar extends Component {
         <hr/>
 
         <div className={styles.bottom}>
-          <i class="fab fa-soundcloud"></i>
+
+          <div className={styles.links}>
+            <a href={config.github} className={styles.link}>
+              <i className="fab fa-github"></i>
+            </a>
+            <a href={config.twitter} className={styles.link}>
+              <i className="fab fa-twitter"></i>
+            </a>
+            <a href={config.soundcloud} className={styles.link}>
+              <i className="fab fa-soundcloud"></i>
+            </a>
+          </div>
+
+
+          <div className={styles.resume}>
+            <i class="fas fa-file"></i>
+            <br />
+            <p>Download my resume</p>
+          </div>
+
+          <p className={styles.credit}>
+            Built with ⚡️ and 🍕 using Gatsby
+          </p>
 
         </div>
 

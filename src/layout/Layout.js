@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import Sidebar from '../components/Sidebar'
 import config from '../config/config'
 
-import base from '../styles/base.module.scss';
+import main from '../styles/main.module.scss';
 import '../styles/sidebar.module.scss';
 import '../../node_modules/normalize.css/normalize.css';
 
@@ -34,7 +34,7 @@ const Layout = ({ children }) => (
 
         <Sidebar />
 
-        <div className={base.content}>
+        <div className={main.content}>
           {children}
         </div>
 
