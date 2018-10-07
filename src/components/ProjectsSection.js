@@ -26,7 +26,7 @@ class ProjectsSection extends Component {
 
     const clientProjects = this.props.clientProjects
 
-    // const myProjects = this.props.myProjects
+    const myProjects = this.props.myProjects
 
     return (
       <div className={styles.projectsSection}>
@@ -56,7 +56,21 @@ class ProjectsSection extends Component {
 
         <div className={styles.projectsGroup}>
 
-          <Project
+          {
+            myProjects.map((project, i) => {
+              const node = project.node
+              console.log(node)
+              return <Project
+                key={i}
+                client={node.title}
+                projectUrl={node.url}
+                description={node.description.description}
+                technologies={node.technologiesUsed}
+              />
+            })
+          }
+
+          {/* <Project
             client='Retrograde Zone'
             projectUrl='https://www.torvel.us'
             description='I did this, that and the other'
@@ -81,7 +95,7 @@ class ProjectsSection extends Component {
             version='v1.8'
             status='completed'
             technologies={technologies[2]}
-          />
+          /> */}
 
         </div>
 
