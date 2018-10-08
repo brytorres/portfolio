@@ -65,7 +65,7 @@ const Layout = ({ children }) => (
           {data.image}
           {children}
         </div>
-        
+
         <Sidebar 
           image = {data.allContentfulSiteInfo.edges[0].node.headshot.fixed.src}
           roles = {data.allContentfulSiteInfo.edges[0].node.roles}
@@ -76,7 +76,6 @@ const Layout = ({ children }) => (
           soundcloud = {data.allContentfulSiteInfo.edges[0].node.soundcloud}
           resume = {data.allContentfulSiteInfo.edges[0].node.resume.file.url}
         />
-
 
       </>
     )}

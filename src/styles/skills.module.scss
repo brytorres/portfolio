@@ -41,3 +41,35 @@
     }
   }
 }
+
+@include media('>=large') {
+}
+
+@include media('>=medium', '<large') {
+}
+
+@include media('>xsmall', '<medium') {
+  .skills {
+  
+    h3 {
+      margin-top: 20px
+    }
+
+    .skillsGroup{
+      width: 25%
+    }
+  }
+}
+
+@include media('<=xsmall') {
+  .skills {
+  
+    h3 {
+      margin-top: 20px
+    }
+
+    .skillsGroup{
+      width: 50%
+    }
+  }
+}
