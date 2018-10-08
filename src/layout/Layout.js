@@ -61,6 +61,11 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
 
+        <div className={main.content}>
+          {data.image}
+          {children}
+        </div>
+        
         <Sidebar 
           image = {data.allContentfulSiteInfo.edges[0].node.headshot.fixed.src}
           roles = {data.allContentfulSiteInfo.edges[0].node.roles}
@@ -72,10 +77,6 @@ const Layout = ({ children }) => (
           resume = {data.allContentfulSiteInfo.edges[0].node.resume.file.url}
         />
 
-        <div className={main.content}>
-          {data.image}
-          {children}
-        </div>
 
       </>
     )}
