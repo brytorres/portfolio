@@ -13,10 +13,7 @@ const IndexPage = props => {
     const experience = props.data.allContentfulExperience.edges
     const clientProjects = props.data.allContentfulClientProjects.edges
     const myProjects = props.data.allContentfulMyProjects.edges
-    // const skills = props.data.allContentfulCategories.edges
-
-    // console.log(clientProjects);
-
+    const skills = props.data.allContentfulCategories.edges
 
     return (
     <Layout>
@@ -42,7 +39,9 @@ const IndexPage = props => {
       myProjects = {myProjects}
     />
 
-    <Skills />
+    <Skills 
+      skills = {skills}
+    />
     
   </Layout>
   )
@@ -81,6 +80,7 @@ export const pageQuery = graphql`
           description {
             description
           }
+          priority
         }
       }
     }
@@ -99,6 +99,7 @@ export const pageQuery = graphql`
             description
           }
           technologiesUsed
+          priority
         }
       }
     }
@@ -113,6 +114,7 @@ export const pageQuery = graphql`
           }
           technologiesUsed
           version
+          priority
         }
       }
     }
@@ -126,6 +128,7 @@ export const pageQuery = graphql`
             group
             priority
           }
+          priority
         }
       }
     }

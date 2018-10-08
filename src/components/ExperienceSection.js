@@ -8,8 +8,6 @@ class ExperienceSection extends Component {
 
     const allExperience = this.props.experience
 
-    console.log(allExperience)
-
     return (
       <div className={styles.experienceSection}>
 

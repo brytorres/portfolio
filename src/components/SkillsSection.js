@@ -7,49 +7,11 @@ import styles from '../styles/skills.module.scss';
 class SkillsSection extends Component {
   render() {
 
-    const skills = [
-      [
-        'HTML5',
-        'CSS3',
-        'JavaScript',
-        'PHP',
-        'Python',
-        'Git'
-      ],
-      [
-        'Laravel',
-        'WordPress',
-        'Vue',
-        'React',
-        'jQuery',
-        'Sass',
-        'Bootstrap 4',
-        'Materialize'
-      ],
-      [
-        'UI / UX Design',
-        'Audio Engineering',
-        'Music Production',
-        'Graphic Design',
-        'Motion Graphics',
-        'Video Editing'
-      ],
-      [
-        [
-          'Adobe CC',
-          'Photoshop',
-          'Illustrator',
-          'After Effects',
-          'Premiere',
-          'InDesign',
-        ],
-        'Ableton Live',
-        'Logic Pro X',
-        'Pro Tools',
-        'Blender 3D',
-        'Sketchup'
-      ]
-    ];
+    const skillsGroups = this.props.skills;
+    
+    skillsGroups.sort(function (a, b) {
+      return a.node.priority - b.node.priority;
+    });
 
     return (
       <div className={styles.skills}>
@@ -57,25 +19,18 @@ class SkillsSection extends Component {
         <h3>Skills</h3>
 
         <div className={styles.skillsSection}>
-          <SkillGroup 
-            title = 'Languages'
-            skills = {skills[0]}
-          />
 
-          <SkillGroup 
-            title = 'Frameworks & Libraries'
-            skills = {skills[1]}
-          />
+          {
+            skillsGroups.map((skillGroup, i) => {
+              const node = skillGroup.node
+              return <SkillGroup
+                key = {i}
+                title = {node.title}
+                skills = {node.skills}
+              />
+            })
+          }
 
-          <SkillGroup 
-            title = 'Media Design'
-            skills = {skills[2]}
-          />
-
-          <SkillGroup 
-            title = 'Software'
-            skills = {skills[3]}
-          />
         </div>
 
 

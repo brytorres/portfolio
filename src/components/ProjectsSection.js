@@ -20,7 +20,6 @@ class ProjectsSection extends Component {
           {
             clientProjects.map((project, i) => {
               const node = project.node
-              console.log(node)
               return <Project
                         key = {i}
                         client = {node.title}
@@ -41,7 +40,6 @@ class ProjectsSection extends Component {
           {
             myProjects.map((project, i) => {
               const node = project.node
-              console.log(node)
               return <Project
                 key={i}
                 client={node.title}
