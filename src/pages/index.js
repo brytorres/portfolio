@@ -37,7 +37,7 @@ const IndexPage = props => {
 
       <ProjectsSection 
         clientProjects = {clientProjects}
-        myProjects = {myProjects}
+          myProjects = {myProjects}
       />
 
       <Skills 
