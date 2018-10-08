@@ -10,6 +10,14 @@ class ProjectsSection extends Component {
 
     const myProjects = this.props.myProjects
 
+    clientProjects.sort(function (a, b) {
+      return a.node.priority - b.node.priority;
+    });
+
+    myProjects.sort(function (a, b) {
+      return a.node.priority - b.node.priority;
+    });
+
     return (
       <div className={styles.projectsSection}>
 

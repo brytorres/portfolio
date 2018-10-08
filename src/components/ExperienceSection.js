@@ -8,6 +8,10 @@ class ExperienceSection extends Component {
 
     const allExperience = this.props.experience
 
+    allExperience.sort(function (a, b) {
+      return a.node.priority - b.node.priority;
+    });
+
     return (
       <div className={styles.experienceSection}>
 
