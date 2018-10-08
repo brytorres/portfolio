@@ -29,9 +29,7 @@ const Layout = ({ children }) => (
               }
               headshot {
                 fixed(width: 300, height: 300) {
-                  # base64
                   src
-                  # srcSet
                   height
                   width
                 }

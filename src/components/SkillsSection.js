@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import SkillGroup from '../components/SkillGroup'
-// import config from '../config/config';
 
 import styles from '../styles/skills.module.scss';
 

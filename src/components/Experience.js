@@ -25,6 +25,7 @@ class Experience extends Component {
 
     return (
       <div className={styles.experience}>
+      
         <div className={styles.image} style={bgImage}></div>
 
         <a href={this.props.employerUrl}>
@@ -32,7 +33,6 @@ class Experience extends Component {
             {this.props.employer}
           </h4>
         </a>
-
 
         <p className={styles.title}>
           {this.props.title}
@@ -45,6 +45,7 @@ class Experience extends Component {
         <p className={styles.description}>
           {this.props.description}
         </p>
+        
       </div>
     );
   }

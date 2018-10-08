@@ -1,17 +1,8 @@
 import React, { Component } from 'react';
-import config from '../config/config';
 
 import styles from '../styles/sidebar.module.scss';
 
 class Sidebar extends Component {
-  constructor(props){
-    super(props);
-
-    this.state = {
-      roles: config.roles
-    };
-  }
-
   
   render() {
     

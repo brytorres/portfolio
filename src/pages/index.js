@@ -16,34 +16,36 @@ const IndexPage = props => {
     const skills = props.data.allContentfulCategories.edges
 
     return (
+
     <Layout>
 
-    <h3 className={styles.title}>
-      {siteInfo.headingTitle}
-    </h3>
+      <h3 className={styles.title}>
+        {siteInfo.headingTitle}
+      </h3>
 
-    <h5 className={styles.tagline}>
-        {siteInfo.tagline}
-    </h5>
+      <h5 className={styles.tagline}>
+          {siteInfo.tagline}
+      </h5>
 
-    <p className={styles.about}>
-      {siteInfo.miniBio.miniBio}
-    </p>
+      <p className={styles.about}>
+        {siteInfo.miniBio.miniBio}
+      </p>
 
-    <ExperienceSection 
-      experience = {experience}
-    />
+      <ExperienceSection 
+        experience = {experience}
+      />
 
-    <ProjectsSection 
-      clientProjects = {clientProjects}
-      myProjects = {myProjects}
-    />
+      <ProjectsSection 
+        clientProjects = {clientProjects}
+        myProjects = {myProjects}
+      />
 
-    <Skills 
-      skills = {skills}
-    />
+      <Skills 
+        skills = {skills}
+      />
     
-  </Layout>
+    </Layout>
+    
   )
 }
 

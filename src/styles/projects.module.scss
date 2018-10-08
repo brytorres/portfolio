@@ -46,7 +46,6 @@
         }
       }
   
-  
       .title {
         margin-top: 0px;
         margin-bottom: 10px;
@@ -81,12 +80,6 @@
       }
     }
   }
-}
-
-@include media('>=large') {
-}
-
-@include media('>=medium', '<large') {
 }
 
 @include media('>xsmall', '<medium') {
