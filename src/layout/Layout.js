@@ -65,7 +65,8 @@ const Layout = ({ children }) => (
         </div>
 
         <Sidebar 
-          image = {data.allContentfulSiteInfo.edges[0].node.headshot.fixed.src}
+          // image = {data.allContentfulSiteInfo.edges[0].node.headshot.fixed.src}
+          image='https://media.licdn.com/dms/image/C4E03AQEvMIFs8k_i6A/profile-displayphoto-shrink_200_200/0?e=1553731200&v=beta&t=_JjzA7nm41YWBstjNnrN7mI1AF-uo6itgi0zDXWxqhQ.jpg'
           roles = {data.allContentfulSiteInfo.edges[0].node.roles}
           about = {data.allContentfulSiteInfo.edges[0].node.about}
           linkedIn = {data.allContentfulSiteInfo.edges[0].node.linkedIn}

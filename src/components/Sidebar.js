@@ -9,7 +9,7 @@ class Sidebar extends Component {
     const image = `http:${this.props.image}`
 
     const bgImage = {
-      backgroundImage: `url(${image})`
+      backgroundImage: `url('https://media.licdn.com/dms/image/C4E03AQEvMIFs8k_i6A/profile-displayphoto-shrink_200_200/0?e=1553731200&v=beta&t=_JjzA7nm41YWBstjNnrN7mI1AF-uo6itgi0zDXWxqhQ')`,
     }
 
     return (
@@ -50,7 +50,7 @@ class Sidebar extends Component {
 
 
           <div className={styles.resume}>
-            <a href={this.props.resume}>
+            <a href="https://www.dropbox.com/s/uldbjxm8ggtei0j/2019_BryanTorresResume.pdf?dl=0">
               <i className="fas fa-file"></i>
               <br />
               <p>Download my resume</p>
